@@ -34,8 +34,7 @@ public class WorkWithFile {
                 System.out.println("Error occured while writing" + e.getMessage());
             }
 
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             System.out.println("Error occured " + e.getMessage());
         }
 
