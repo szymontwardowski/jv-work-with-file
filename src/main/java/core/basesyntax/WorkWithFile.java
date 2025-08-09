@@ -1,6 +1,11 @@
 package core.basesyntax;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class WorkWithFile {
     public void getStatistic(String fromFileName, String toFileName) {
@@ -22,13 +27,13 @@ public class WorkWithFile {
             }
             int result = supply - buy;
 
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(toFileName))) {
-                    writer.write("supply," + supply + "\n");
-                    writer.write("buy," + buy + "\n");
-                    writer.write("result," + result + "\n");
-                } catch (IOException e) {
-                    System.out.println("Error occured while writing" + e.getMessage());
-                }
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(toFileName))) {
+                writer.write("supply," + supply + "\n");
+                writer.write("buy," + buy + "\n");
+                writer.write("result," + result + "\n");
+            } catch (IOException e) {
+                System.out.println("Error occured while writing" + e.getMessage());
+            }
 
 
         } catch (
