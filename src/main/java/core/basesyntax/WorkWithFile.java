@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-
 public class WorkWithFile {
     public void getStatistic(String fromFileName, String toFileName) {
         int supply = 0;
@@ -34,7 +33,6 @@ public class WorkWithFile {
             } catch (IOException e) {
                 System.out.println("Error occured while writing" + e.getMessage());
             }
-
 
         } catch (
                 IOException e) {
